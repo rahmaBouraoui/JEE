@@ -6,9 +6,13 @@ import com.esgi.tache.domaine.Tache;
 
 public interface ITacheDao {
 	
-	public Tache getTacheById(int id) ;
-	public void saveTache(Tache tache);
-	public int getTachesCount();
-	public List<Tache> getAllTaches();
+	public void enregistrerTache( Tache uneTache ) ;
+	public Tache getTacheById( int id ) ;
+	public List<Tache> getTaches() ;
+	public void setEtatTache( Tache uneTache ) ;
+	public void supprimerTache( Tache uneTache ) ;
+	public void supprimerTache( int id ) ;
+	
+	public List<Tache> getTachesEnAttente() ;
 
 }
